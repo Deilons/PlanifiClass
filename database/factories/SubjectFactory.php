@@ -14,7 +14,7 @@ class SubjectFactory extends Factory
         return [
             'name' => $this->faker->word(),
             'description' => $this->faker->sentence(),
-            'teacher_id' => \App\Models\User::where('role', 'teacher')->inRandomOrder()->first()->id, // Asigna un profesor aleatorio
+            'teacher_id' => \App\Models\User::where('role', 'Teacher')->inRandomOrder()->first()->id,
         ];
     }
 }
